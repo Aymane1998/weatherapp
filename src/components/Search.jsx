@@ -10,9 +10,9 @@ const Search = ({onSearchChange}) => {
 
 
     //fatch data from API 
-    const loadOptions = (aymaneValue) =>{
+    const  loadOptions = async (inputValue) =>{
         return fetch
-            (`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${aymaneValue}`,geoApiOptions)
+            (`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`,geoApiOptions)
         .then(response => response.json())
         .then(response => {
             return {
@@ -41,6 +41,7 @@ const Search = ({onSearchChange}) => {
     value={search}
     onChange={handleOnChange}
     loadOptions={loadOptions}
+    className="search-box"
     />
     
   )

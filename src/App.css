@@ -1,4 +1,7 @@
 .container{
-  max-width: 1080px;
-  margin: 20px auto;
+  max-width: 1050px;
+  margin: 20px auto 80px;
+}
+.search-box{
+  color: black;
 }
